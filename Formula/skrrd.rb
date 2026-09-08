@@ -42,12 +42,12 @@
 # of adding a formula.
 #
 # Placeholders (all single-quoted so shell interpolation can't clash):
-#   0.8.15                — numeric version, no leading "v" (e.g. 0.8.7)
-#   https://updates.oversky.ai/daemon/releases/0.8.15/skrrd-darwin-arm64       — CloudFront feed URL for skrrd-darwin-arm64
-#   475436b5801befe13b1712fec73fc8520b7430f2505b0faaed8ed19a2d6d1e82       — sha256 of that asset
-#   https://updates.oversky.ai/daemon/releases/0.8.15/skrrd-darwin-x64, dc658f45f4b686289f99e6f316f003f358dadc84021d7b7d2e11feef2be5f64c
-#   https://updates.oversky.ai/daemon/releases/0.8.15/skrrd-linux-x64,  1d74858b5467c3691b4811c7fe23abd5c5b8b6f9c3cb1729ed2053d4965b1c1a
-#   https://updates.oversky.ai/daemon/releases/0.8.15/skrrd-linux-arm64, 2fb7809db82d2249b7adc467650b1e7725d65377095552aeb81c4a2ef417b3e0
+#   0.8.16                — numeric version, no leading "v" (e.g. 0.8.7)
+#   https://updates.oversky.ai/daemon/releases/0.8.16/skrrd-darwin-arm64       — CloudFront feed URL for skrrd-darwin-arm64
+#   4ff7eb671769718480f47935cacadbbbc3501ede9ebcbb35de8ef7ef49ca9bfb       — sha256 of that asset
+#   https://updates.oversky.ai/daemon/releases/0.8.16/skrrd-darwin-x64, 62a79d4ce66b7e97fcf1fe4e1da3c93718be2a000569c24f2c595ce4c1a71376
+#   https://updates.oversky.ai/daemon/releases/0.8.16/skrrd-linux-x64,  60467450165271695bcc292041d4259653289a8c7632236efed271f1053dc856
+#   https://updates.oversky.ai/daemon/releases/0.8.16/skrrd-linux-arm64, 7d93bb3dc91a4f2a1b51422a2d9f8a8e8e2a99a3c3ea10500383accd0445a763
 #
 # Install path for users:
 #   brew tap skrr-ai/tap
@@ -64,27 +64,27 @@ class Skrrd < Formula
   desc "Local AI agent runtime for skrr"
   homepage "https://github.com/dush1023/OverSky"
   license "UNLICENSED"
-  version "0.8.15"
+  version "0.8.16"
 
   on_macos do
     on_arm do
-      url "https://updates.oversky.ai/daemon/releases/0.8.15/skrrd-darwin-arm64"
-      sha256 "475436b5801befe13b1712fec73fc8520b7430f2505b0faaed8ed19a2d6d1e82"
+      url "https://updates.oversky.ai/daemon/releases/0.8.16/skrrd-darwin-arm64"
+      sha256 "4ff7eb671769718480f47935cacadbbbc3501ede9ebcbb35de8ef7ef49ca9bfb"
     end
     on_intel do
-      url "https://updates.oversky.ai/daemon/releases/0.8.15/skrrd-darwin-x64"
-      sha256 "dc658f45f4b686289f99e6f316f003f358dadc84021d7b7d2e11feef2be5f64c"
+      url "https://updates.oversky.ai/daemon/releases/0.8.16/skrrd-darwin-x64"
+      sha256 "62a79d4ce66b7e97fcf1fe4e1da3c93718be2a000569c24f2c595ce4c1a71376"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://updates.oversky.ai/daemon/releases/0.8.15/skrrd-linux-arm64"
-      sha256 "2fb7809db82d2249b7adc467650b1e7725d65377095552aeb81c4a2ef417b3e0"
+      url "https://updates.oversky.ai/daemon/releases/0.8.16/skrrd-linux-arm64"
+      sha256 "7d93bb3dc91a4f2a1b51422a2d9f8a8e8e2a99a3c3ea10500383accd0445a763"
     end
     on_intel do
-      url "https://updates.oversky.ai/daemon/releases/0.8.15/skrrd-linux-x64"
-      sha256 "1d74858b5467c3691b4811c7fe23abd5c5b8b6f9c3cb1729ed2053d4965b1c1a"
+      url "https://updates.oversky.ai/daemon/releases/0.8.16/skrrd-linux-x64"
+      sha256 "60467450165271695bcc292041d4259653289a8c7632236efed271f1053dc856"
     end
   end
 
