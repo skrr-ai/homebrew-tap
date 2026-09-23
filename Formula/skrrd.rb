@@ -29,25 +29,20 @@
 # The rendered per-arch url/sha256 values point at the PUBLIC CloudFront feed,
 # NOT at github.com — the GitHub repo is private, so its Release assets 404 for
 # public users. The bump-formula job sets BASE to
-#   https://updates.oversky.ai/daemon/releases/<version>
-# and each URL resolves to <BASE>/skrrd-<platform>-<arch>. Those objects exist
-# from the add phase of the asset-stem rename: the release publishes the same
-# bytes under both `oversky-<platform>` and `skrrd-<platform>`, so this formula
+#   https://updates.skrr.ai/daemon/releases/<version>
+# and each URL resolves to <BASE>/skrrd-<platform>-<arch> — the stem the signed
+# manifest names. The release publishes the same bytes under both
+# `skrrd-<platform>` and the `oversky-<platform>` compat copy, so this formula
 # and the legacy `oversky.rb` beside it describe identical binaries with
 # identical checksums.
 #
-# BASE still names updates.oversky.ai deliberately. That host is the one the
-# signed manifests resolve through, and the workflow reads it from one place;
-# moving it is a separate change with its own preconditions, not a side effect
-# of adding a formula.
-#
 # Placeholders (all single-quoted so shell interpolation can't clash):
-#   0.8.59                — numeric version, no leading "v" (e.g. 0.8.7)
-#   https://updates.oversky.ai/daemon/releases/0.8.59/skrrd-darwin-arm64       — CloudFront feed URL for skrrd-darwin-arm64
-#   578fe7d36f0b0f47e12da992785efc2768ef710f07a1049890afc8f4430febf4       — sha256 of that asset
-#   https://updates.oversky.ai/daemon/releases/0.8.59/skrrd-darwin-x64, b299d2cf7f096af75511529b2fbd07b7bcb2b07222af1edcaea0cdb6a8eb54af
-#   https://updates.oversky.ai/daemon/releases/0.8.59/skrrd-linux-x64,  d2d58921f91f1bdd3cc7f3c22dd9ff4de4c3eb7c2e0181598ded8c557c543fda
-#   https://updates.oversky.ai/daemon/releases/0.8.59/skrrd-linux-arm64, 4d7debf5771d66a29f52768feebc0bfaccdc204a35525e8755d0275796d1f391
+#   0.8.61                — numeric version, no leading "v" (e.g. 0.8.7)
+#   https://updates.skrr.ai/daemon/releases/0.8.61/skrrd-darwin-arm64       — CloudFront feed URL for skrrd-darwin-arm64
+#   fb712c8a534c5ee2d6d80a7c5d86eca0571e09ae77e84d703d66da7c1b87ee26       — sha256 of that asset
+#   https://updates.skrr.ai/daemon/releases/0.8.61/skrrd-darwin-x64, 5d6b7fb23b7cbb7c0f9807e3c53406afa2ddf7a0aa75942d04f30af0bd815f37
+#   https://updates.skrr.ai/daemon/releases/0.8.61/skrrd-linux-x64,  0690a288dd1772a0ad88d4b1a0091549a3ced8a1fc9ba3af4c14c8a04ebee9a3
+#   https://updates.skrr.ai/daemon/releases/0.8.61/skrrd-linux-arm64, 41051de90f7c3381a690dcb59bce11f3801853d5859e3bf415b4387962d39a28
 #
 # Install path for users:
 #   brew tap skrr-ai/tap
@@ -64,27 +59,27 @@ class Skrrd < Formula
   desc "Local AI agent runtime for skrr"
   homepage "https://github.com/dush1023/OverSky"
   license "UNLICENSED"
-  version "0.8.59"
+  version "0.8.61"
 
   on_macos do
     on_arm do
-      url "https://updates.oversky.ai/daemon/releases/0.8.59/skrrd-darwin-arm64"
-      sha256 "578fe7d36f0b0f47e12da992785efc2768ef710f07a1049890afc8f4430febf4"
+      url "https://updates.skrr.ai/daemon/releases/0.8.61/skrrd-darwin-arm64"
+      sha256 "fb712c8a534c5ee2d6d80a7c5d86eca0571e09ae77e84d703d66da7c1b87ee26"
     end
     on_intel do
-      url "https://updates.oversky.ai/daemon/releases/0.8.59/skrrd-darwin-x64"
-      sha256 "b299d2cf7f096af75511529b2fbd07b7bcb2b07222af1edcaea0cdb6a8eb54af"
+      url "https://updates.skrr.ai/daemon/releases/0.8.61/skrrd-darwin-x64"
+      sha256 "5d6b7fb23b7cbb7c0f9807e3c53406afa2ddf7a0aa75942d04f30af0bd815f37"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://updates.oversky.ai/daemon/releases/0.8.59/skrrd-linux-arm64"
-      sha256 "4d7debf5771d66a29f52768feebc0bfaccdc204a35525e8755d0275796d1f391"
+      url "https://updates.skrr.ai/daemon/releases/0.8.61/skrrd-linux-arm64"
+      sha256 "41051de90f7c3381a690dcb59bce11f3801853d5859e3bf415b4387962d39a28"
     end
     on_intel do
-      url "https://updates.oversky.ai/daemon/releases/0.8.59/skrrd-linux-x64"
-      sha256 "d2d58921f91f1bdd3cc7f3c22dd9ff4de4c3eb7c2e0181598ded8c557c543fda"
+      url "https://updates.skrr.ai/daemon/releases/0.8.61/skrrd-linux-x64"
+      sha256 "0690a288dd1772a0ad88d4b1a0091549a3ced8a1fc9ba3af4c14c8a04ebee9a3"
     end
   end
 
