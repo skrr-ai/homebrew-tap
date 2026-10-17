@@ -37,12 +37,12 @@
 # identical checksums.
 #
 # Placeholders (all single-quoted so shell interpolation can't clash):
-#   0.8.124                — numeric version, no leading "v" (e.g. 0.8.7)
-#   https://updates.skrr.ai/daemon/releases/0.8.124/skrrd-darwin-arm64       — CloudFront feed URL for skrrd-darwin-arm64
-#   51358f4f91e4de894e1bdba0d51494ab462d913f5b31f3f494b9ae111a36bab6       — sha256 of that asset
-#   https://updates.skrr.ai/daemon/releases/0.8.124/skrrd-darwin-x64, c182a032b3a49b204c65fa2b3b4eb5511e388723f6e0c3a47a4753166870e5c8
-#   https://updates.skrr.ai/daemon/releases/0.8.124/skrrd-linux-x64,  26a1cf09541f5bb48fc7b33d01ed0370bf0d81b38d7c8c579d3eddba1517dc87
-#   https://updates.skrr.ai/daemon/releases/0.8.124/skrrd-linux-arm64, 60a2aad75e1152694892a31d67433e91bfa09693123a2ab2d7bd1c198290a22f
+#   0.8.125                — numeric version, no leading "v" (e.g. 0.8.7)
+#   https://updates.skrr.ai/daemon/releases/0.8.125/skrrd-darwin-arm64       — CloudFront feed URL for skrrd-darwin-arm64
+#   5af11ff229a7e97a24842ef13b2ceb9c22a2aab17d74ab40c889055f49f82ba0       — sha256 of that asset
+#   https://updates.skrr.ai/daemon/releases/0.8.125/skrrd-darwin-x64, 62a96e56892f59d1328750fdcd817fd25cb770d1d05485aeebbcac22c5b331fa
+#   https://updates.skrr.ai/daemon/releases/0.8.125/skrrd-linux-x64,  234dc8c7d371a88a076830dbac05339ceb18db615c877d3ceaeb135c0ae4b7ea
+#   https://updates.skrr.ai/daemon/releases/0.8.125/skrrd-linux-arm64, d2b20d954849edde02dc7ce2614e44aca46df37273a1c2404f5e9df0e4211b72
 #
 # Install path for users:
 #   brew tap skrr-ai/tap
@@ -59,27 +59,27 @@ class Skrrd < Formula
   desc "Local AI agent runtime for skrr"
   homepage "https://github.com/dush1023/OverSky"
   license "UNLICENSED"
-  version "0.8.124"
+  version "0.8.125"
 
   on_macos do
     on_arm do
-      url "https://updates.skrr.ai/daemon/releases/0.8.124/skrrd-darwin-arm64"
-      sha256 "51358f4f91e4de894e1bdba0d51494ab462d913f5b31f3f494b9ae111a36bab6"
+      url "https://updates.skrr.ai/daemon/releases/0.8.125/skrrd-darwin-arm64"
+      sha256 "5af11ff229a7e97a24842ef13b2ceb9c22a2aab17d74ab40c889055f49f82ba0"
     end
     on_intel do
-      url "https://updates.skrr.ai/daemon/releases/0.8.124/skrrd-darwin-x64"
-      sha256 "c182a032b3a49b204c65fa2b3b4eb5511e388723f6e0c3a47a4753166870e5c8"
+      url "https://updates.skrr.ai/daemon/releases/0.8.125/skrrd-darwin-x64"
+      sha256 "62a96e56892f59d1328750fdcd817fd25cb770d1d05485aeebbcac22c5b331fa"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://updates.skrr.ai/daemon/releases/0.8.124/skrrd-linux-arm64"
-      sha256 "60a2aad75e1152694892a31d67433e91bfa09693123a2ab2d7bd1c198290a22f"
+      url "https://updates.skrr.ai/daemon/releases/0.8.125/skrrd-linux-arm64"
+      sha256 "d2b20d954849edde02dc7ce2614e44aca46df37273a1c2404f5e9df0e4211b72"
     end
     on_intel do
-      url "https://updates.skrr.ai/daemon/releases/0.8.124/skrrd-linux-x64"
-      sha256 "26a1cf09541f5bb48fc7b33d01ed0370bf0d81b38d7c8c579d3eddba1517dc87"
+      url "https://updates.skrr.ai/daemon/releases/0.8.125/skrrd-linux-x64"
+      sha256 "234dc8c7d371a88a076830dbac05339ceb18db615c877d3ceaeb135c0ae4b7ea"
     end
   end
 
